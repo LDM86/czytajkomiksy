@@ -1,0 +1,78 @@
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+$adminbar__size: 32px;
+$adminbar__size-nav: calc(75px + 32px);
+$adminbar__size-header: calc(70px + 32px);
+$adminbar__size-height: calc(100% - (70px + 32px));
+
+$adminbar__size-mobile: 46px;
+$adminbar__size-nav-mobile: calc(75px + 46px);
+$adminbar__size-header-mobile: calc(70px + 46px);
+$adminbar__size-height-mobile: calc(100% - (70px + 46px));
+
+$header__height: 70px;
+
+$z-index: (
+  header             : 200,
+  search             : 199,
+  sidebar            : 100,
+  minicart           : 90,
+);
+
+@function z-index($key) {
+    @return map-get($z-index, $key);
+}
+  
+@mixin z-index($key) {
+    z-index: z-index($key);
+}
+
+.no-margin {
+  margin: 0;
+  &__top {
+    margin-top: 0;
+  }
+  &__bottom {
+    margin-bottom: 0;
+  }
+  &__left {
+    margin-left: 0;
+  }
+  &__right {
+    margin-right: 0;
+  }
+  &__tb-edges {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__side-edges {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.no-padding {
+  padding: 0;
+  &__top {
+    padding-top: 0;
+  }
+  &__bottom {
+    padding-bottom: 0;
+  }
+  &__left {
+    padding-left: 0;
+  }
+  &__right {
+    padding-right: 0;
+  }
+  &__tb-edges {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  &__side-edges {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+

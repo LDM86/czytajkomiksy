@@ -1,0 +1,51 @@
+.archive-page {
+    &__container {
+        @extend %container;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @include rwd(768) {
+            padding-bottom: 20px;
+        }
+    }
+    &__header {
+        height: auto;
+        width: 100%;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: $color__primary;
+        &--image {
+            height: 425px;
+        }
+        
+    }
+    &__title {
+        color: $color__white;
+        margin: 0;
+        line-height: calc(100% + 6px);
+        font-weight: 700;
+        letter-spacing: -2px;
+        font-size: 45px;
+        @include rwd(768) {
+            font-size: 35px;
+        }
+    }
+    &__description {
+        color: $color__white;
+        font-size: 16px;
+        @include rwd(768) {
+            font-size: 14px;
+        }
+        p {
+            margin-bottom: 16px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

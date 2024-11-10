@@ -1,0 +1,25 @@
+// {
+//     "version": "2.0.0",
+//     "tasks": [
+//         {
+//             "label": "npm run watch",
+//             "type": "shell",
+//             "command": "npm run watch",
+//             "problemMatcher": [],
+//             "options": {
+//                 "cwd": "${workspaceFolder}/wp-content/themes/by-grzywa"
+//             },
+//             "group": {
+//                 "kind": "build",
+//                 "isDefault": true
+//             },
+//             "presentation": {
+//                 "reveal": "always",
+//                 "panel": "shared"
+//             },
+//             "runOptions": {
+//                 "runOn": "folderOpen"
+//             }
+//         }
+//     ]
+// }

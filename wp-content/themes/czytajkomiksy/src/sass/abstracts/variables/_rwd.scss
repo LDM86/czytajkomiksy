@@ -1,0 +1,75 @@
+$r325: 360px;
+$r375: 425px;
+$r480: 540px;
+$r560: 750px;
+$r768: 843px;
+$r980: 1010px;
+$r1024: 1185px;
+$r1280: 1280px;
+$r1366: 1366px;
+$r1440: 1550px;
+$r1680: 1700px;
+$adminbar: 782px;
+$adminbar__static: 600px;
+
+@mixin rwd($point) {
+    @if $point == 325 {
+        @media screen and (max-width: $r325) {
+            @content;
+        }
+    } @else if $point == 375 {
+        @media screen and (max-width: $r375) {
+            @content;
+        }
+    } @else if $point == 480 {
+        @media screen and (max-width: $r480) {
+            @content;
+        }
+    } @else if $point == 560 {
+        @media screen and (max-width: $r560) {
+            @content;
+        }
+    } @else if $point == 768 {
+        @media screen and (max-width: $r768) {
+            @content;
+        }
+    } @else if $point == 980 {
+        @media screen and (max-width: $r980) {
+            @content;
+        }
+    }@else if $point == 1024 {
+        @media screen and (max-width: $r1024) {
+            @content;
+        }
+    }
+    @else if $point == 1280 {
+        @media screen and (max-width: $r1280) {
+            @content;
+        }
+    }
+    @else if $point == 1366 {
+        @media screen and (max-width: $r1366) {
+            @content;
+        }
+    }
+    @else if $point == 1440 {
+        @media screen and (max-width: $r1440) {
+            @content;
+        }
+    }
+    @else if $point == 1680 {
+        @media screen and (max-width: $r1680) {
+            @content;
+        }
+    }
+    @else if $point == adminbar {
+        @media screen and (max-width: $adminbar) {
+            @content;
+        }
+    }
+    @else if $point == adminbar__static {
+        @media screen and (max-width: $adminbar__static) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+
+%link-content {
+	color: var(--color-text);
+    text-decoration: none;
+    background-position-y: -0%;
+    background-image: linear-gradient( var(--background) 50%, $color__primary 50%);
+    transition: background 0.3s ease;
+    background-size: 2px;
+    background-size: auto 175%;
+}
+
+
+a {
+	color: $color__link;
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+

@@ -1,0 +1,62 @@
+:root {
+	--background: #{$color__background-light};
+	--background-menu: #{$color__background-light};
+	--background-submenu: #{$color__background-light-sec};
+	--color-border-menu: #{$color__border-menu-light};
+	--color-shadow-submenu: #{$color__shadow-submenu-light};
+	--color-text: #{$color__font-light};
+	--color-menu: #{$color__font-menu};
+	--color-menu-hover: #{$color__font-light};
+	--bg-footer-coop: #{$bg__footer-coop-light};
+	--bg-categories: #{$color__font-light};
+}
+
+body {
+	background-color: var(--background);
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+%container {
+	width: 100%;
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 0 25px;
+	display: flex;
+	flex-direction: row;
+	@include rwd(768){
+		flex-wrap: wrap;
+	}
+	@include rwd(480) {
+		padding: 0 15px;
+	}
+}
+
+.wrapper {
+	margin-top: 70px;
+}
+
+.container {
+	@extend %container;
+	&--100 {
+		max-width: 1920px;
+	}
+	&--80 {
+		max-width: 1680px;
+	}
+	&--70 {
+		max-width: 1440px;
+	}
+	&--wrap {
+		flex-wrap: wrap;
+	}
+}
+
+
+
+
+
+
+
+

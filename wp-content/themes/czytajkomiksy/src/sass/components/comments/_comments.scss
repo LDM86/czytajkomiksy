@@ -1,0 +1,186 @@
+.comments {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 86px 0 0;
+    width: 100%;
+    &-area {
+        width: 100%;
+    }
+    &__heading {
+        color: $color__primary;
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+        line-height: 1.2;
+        display: block;
+        width: 100%;
+        &:after {
+            content: "";
+            display: inline-block;
+            height: 5.5px;
+            vertical-align: bottom;
+            width: 100%;
+            margin-right: -100%;
+            margin-left: 10px;
+            border-top: 1px solid $color__primary;
+        }
+    }
+}
+
+#wpdcom {
+    .wpd-sbs-toggle {
+        color: var(--color-text);
+        opacity: 0.8;
+        i {
+            &.fa-caret-dow {
+                color: var(--color-text);
+                opacity: 0.8;
+            }
+        }
+    }
+    .wpd_label__check {
+        i {
+            &.wpdicon-off {
+                display: inline-block;
+                color: var(--color-menu);
+                border: 1px solid var(--color-menu);
+            }
+        }
+    }
+    .wpd-thread-head {
+        .wpd-thread-info {
+            color: var(--color-text);
+        }
+    }
+    .wpdiscuz-subscribe-bar {
+        form {
+            flex-wrap: wrap;
+            .wpdiscuz-subscribe-form-intro {
+                font-size: 14px;
+                padding-right: 10px;
+            }
+            .wpdiscuz-subscribe-form-option {
+                padding-right: 10px;
+                .wpdiscuz_select {
+                    font-size: 14px;
+                    border: 1px solid var(--color-menu);
+                    background-color: var(--background);
+                    padding: 4px 14px;
+                    border-radius: 3px;
+                    width: 100%;
+                }
+            }
+            .wpdiscuz-subscribe-form-email {
+                .email {
+                    font-size: 14px;
+                }
+            }
+            .wpdiscuz-subscribe-agreement {
+                width: 100%;
+                margin-bottom: 26px;
+                @extend %input;
+            }
+            #wpdiscuz_subscription_button {
+                &.wpd-prim-button {
+                    padding: 12px 20px 16px;
+                    line-height: 0;
+                }
+            }
+        }
+    }
+    .wpd-form-head {
+        margin-bottom: 16px;
+    }
+    .wpd-textarea-wrap {
+        .wc_comment {
+            font-size: 16px;
+            padding: 15px;
+            resize: none;
+        }
+    }
+    .wpd-item {
+        @extend %input;
+    }
+    .wpd-comment-header {
+        color: var(--color-text);
+    }
+    .wpd-comment-text {
+        color: var(--color-text);
+        p {
+            margin-top: 0;
+        }
+        a {
+            @extend %link-content;
+            &:hover {
+                background-position-y: 100%;
+            }
+        }
+    }
+    .wpd_comment_level-1 {
+        .wpd-form-wrapper {
+            &.wpd-secondary-form-wrapper {
+                padding-left: 80px;
+            }
+        }
+    }
+    .wpd-reply {
+        .wpd-form-wrapper {
+            &.wpd-secondary-form-wrapper {
+                padding-left: 70px;
+            }
+        }
+    }
+
+    .wpd-comment-footer {
+        .wpd-reply-button {
+            color: var(--color-menu);
+        
+        }
+        svg {
+            @include effect($ease);
+        }
+    }
+    .wpd-comment {
+        .wpd-reply-to {
+            a {
+                @include effect($ease);
+            }
+        }
+    }
+}
+
+.wpd-prim-button {
+    padding: 10px 20px;
+    border: 1px solid $color__primary;
+    display: flex;
+    margin: 0 0 0 10px;
+    @extend %button;
+    @include effect($ease);
+    &::after,
+    &::before {
+        display: none;
+    }
+    &:hover {
+        background-color: $color__primary;
+    }
+}
+
+#wpdcom .wpdiscuz-item label.wpd-field-label a {
+    color: var(--color-text);
+    font-weight: 500;
+    text-decoration: none;
+    @include effect($ease);
+}
+#wpdcom .wpdiscuz-item label.wpd-field-label a:hover {
+    color: #74a60a;
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}

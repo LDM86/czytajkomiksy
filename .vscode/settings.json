@@ -1,0 +1,56 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "security.workspace.trust.untrustedFiles": "open",
+    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/wp-content/themes/by-grzywa/", 
+            "savePathReplacementPairs": null,
+        },
+        {
+            "format": "compressed",
+            "name": "style",
+            "extensionName": ".min.css",
+            "savePath": "/wp-content/themes/by-grzywa/", 
+            "savePathReplacementPairs": null
+        }
+    ],
+    "liveSassCompile.settings.forceBaseDirectory": "",
+    "liveSassCompile.settings.useNewCompiler": false,
+    "liveSassCompile.settings.autoprefix": [
+        
+        
+
+
+
+
+
+        "> 1%",
+        "last 2 versions"
+    ],
+    "liveSassCompile.settings.compileOnWatch": false,
+    "liveSassCompile.settings.excludeList": [
+        "/**/css/abstracts/**",
+        "/**/css/components/**",
+        "/**/css/layout/**",
+        "/**/css/node_modules/**",
+        "/**/css/pages/**",
+        "/**/css/partials/**",
+        "/**/css/bootstrap.scss",
+        "/**/node_modules/**",
+        "/.vscode/**",
+        // "/**/sass/**",
+        "/**/plugins/**"
+    ],
+    "git.autofetch": true,
+    "[scss]": {
+        "editor.defaultFormatter": "michelemelluso.code-beautifier"
+    },
+    "diffEditor.maxComputationTime": 0,
+    "extensions.autoUpdate": "onlySelectedExtensions",
+    "[css]": {
+        "editor.defaultFormatter": "michelemelluso.code-beautifier"
+    }
+}
