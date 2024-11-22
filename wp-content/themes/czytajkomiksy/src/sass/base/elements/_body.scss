@@ -8,7 +8,7 @@
 	--color-menu: #{$color__font-menu};
 	--color-menu-hover: #{$color__font-light};
 	--bg-footer-coop: #{$bg__footer-coop-light};
-	--bg-categories: #{$color__font-light};
+	--bg-categories: #{$color__primary};
 }
 
 body {
@@ -34,7 +34,7 @@ body {
 }
 
 .wrapper {
-	margin-top: 70px;
+	margin-top: $header__height;
 }
 
 .container {

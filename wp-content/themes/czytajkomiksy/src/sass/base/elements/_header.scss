@@ -15,7 +15,6 @@
         background: var(--background-menu);
         height: $header__height;
         z-index: 1;
-        @include shadow($shadow__standard);
         @include effect($height);
     }
     &__container {
@@ -286,16 +285,9 @@
                 &:before {
                     @extend %hoverline-before;
                 }
-                &:after {
-                    // @extend %hoverline-after;
-                }
                 &:hover {
                     color: var(--color-menu-hover);
                     &:before {
-                        transform-origin: left;
-                        transform: scaleX(1);
-                    }
-                    &:after {
                         @extend %hoverline-hover;
                     }
                 }

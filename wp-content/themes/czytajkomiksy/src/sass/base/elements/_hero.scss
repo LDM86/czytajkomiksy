@@ -4,14 +4,14 @@
     flex-direction: row;
     margin: 70px auto 0;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
     flex-wrap: wrap;
-    padding: 15px;
+    padding: 0 15px 15px;
     &__row {
         display: flex;
         flex-direction: row;
         width: 100%;
-        gap: 5px;
+        gap: 10px;
         width: 100%;
         max-width: 1920px;
         @include rwd(1280) {
@@ -27,95 +27,69 @@
     position: relative;
     width: 100%;
     &--big {
-        max-width: 1300px;
+        max-width: 1280px;
         height: auto;
-        width: 100%;
+        flex-basis: 100%;
         border: solid black;
         border-width: 4px 5px 4px 6px;
         border-radius:50% 0.5% 50% 0.5%/0.5% 50% 0.5% 50%;
         overflow: hidden;
-        @include rwd(1680) {
-            max-width: 860px;
-            height: 505px;
-        }
-        @include rwd(1440) {
-            max-width: 860px;
-            height: 455px;
-        }
-        @include rwd(1280) {
-            max-width: 100%;
-            height: 555px;
-        }
-        @include rwd(768) {
-            height: 450px;
-        }
-        @include rwd(560) {
-            height: 400px;
-        }
-        @include rwd(375) {
-            max-width: 100%;
-            height: 320px;
-        }
+        // @include rwd(1680) {
+        //     max-width: 860px;
+        //     height: 505px;
+        // }
+        // @include rwd(1440) {
+        //     max-width: 860px;
+        //     height: 455px;
+        // }
+        // @include rwd(1280) {
+        //     max-width: 100%;
+        //     height: 555px;
+        // }
+        // @include rwd(768) {
+        //     height: 450px;
+        // }
+        // @include rwd(560) {
+        //     height: 400px;
+        // }
+        // @include rwd(375) {
+        //     max-width: 100%;
+        //     height: 320px;
+        // }
     }
     &--small {
-        max-width: calc(100% - 1300px);
-        width: 100%;
+        max-width: 620px;
+      
+        flex-basis: 100%;
         height: auto;
-        gap: 5px;
-        @include rwd(1680) {
-            max-width: 450px;
-            height: 505px;
-        }
-        @include rwd(1440) {
-            max-width: 425px;
-            height: 455px;
-        }
-        @include rwd(1366) {
-            max-width: 380px;
-        }
-        @include rwd(1280) {
-            max-width: calc(50% - 2.5px);
-            height: 705px;
-        }
-        @include rwd(768) {
-            height: 505px;
-        }
-        @include rwd(560) {
-            max-width: 100%;
-            height: auto;
-        }
-    }
-    &--cosplay {
-        max-width: 410px;
-        height: 555px;
-        @include rwd(1680) {
-            max-width: 360px;
-            height: 505px;
-        }
-        @include rwd(1440) {
-            max-width: 300px;
-            height: 455px;
-        }
-        @include rwd(1280) {
-            max-width: calc(50% - 2.5px);
-            height: 705px;
-        }
-        @include rwd(768) {
-            height: 505px;
-        }
-        @include rwd(560) {
-            max-width: 100%;
-            height: 360px;
-        }
-        @include rwd(375) {
-            max-width: 100%;
-            height: 260px;
-        }
+        gap: 10px;
+        // @include rwd(1680) {
+        //     max-width: 450px;
+        //     height: 505px;
+        // }
+        // @include rwd(1440) {
+        //     max-width: 425px;
+        //     height: 455px;
+        // }
+        // @include rwd(1366) {
+        //     max-width: 380px;
+        // }
+        // @include rwd(1280) {
+        //     max-width: calc(50% - 2.5px);
+        //     height: 705px;
+        // }
+        // @include rwd(768) {
+        //     height: 505px;
+        // }
+        // @include rwd(560) {
+        //     max-width: 100%;
+        //     height: auto;
+        // }
     }
     &--new-post {
         max-width: 1920px;
         position: relative;
-        gap: 5px;
+        gap: 10px;
         flex-wrap: nowrap;
         @include rwd(1280) {
             flex-wrap: wrap;
@@ -129,46 +103,46 @@
             border-width: 3px 4px 3px 5px;
         border-radius:50% 0.5% 50% 0.5%/0.5% 50% 0.5% 50%;
         overflow: hidden;
-            @include rwd(1440) {
-                height: 225px;
-            }
-            @include rwd(1280) {
-                width: calc((100% / 2) - 3px);
-                height: 360px;
-            }
-            @include rwd(1024) {
-                width: calc((100% / 2) - 3px);
-                height: 300px;
-            }
-            @include rwd(768) {
-                height: 250px;
-            }
-            @include rwd(560) {
-                width: 100%;
-                height: 360px;
-            }
-            @include rwd(375) {
-                max-width: 100%;
-                height: 260px;
-            }
+            // @include rwd(1440) {
+            //     height: 225px;
+            // }
+            // @include rwd(1280) {
+            //     width: calc((100% / 2) - 3px);
+            //     height: 360px;
+            // }
+            // @include rwd(1024) {
+            //     width: calc((100% / 2) - 3px);
+            //     height: 300px;
+            // }
+            // @include rwd(768) {
+            //     height: 250px;
+            // }
+            // @include rwd(560) {
+            //     width: 100%;
+            //     height: 360px;
+            // }
+            // @include rwd(375) {
+            //     max-width: 100%;
+            //     height: 260px;
+            // }
         }
     }
-    .categories {
-        z-index: 3;
-        background-color: #fff;
-        padding: 5px 10px;
-        border: solid black;
-        border-width: 0 2px 3px 0;
-        border-radius:50% 50% 50% 0.5%/5% 0% 15% 50%;
-        overflow: hidden;
-        top: 0;
-        display: flex;
-        position: absolute;
-        a {
-            background-color: transparent;
-            color: #000;
-        }
-    }
+    // .categories {
+    //     z-index: 3;
+    //     background-color: #fff;
+    //     padding: 5px 10px;
+    //     border: solid black;
+    //     border-width: 0 2px 3px 0;
+    //     border-radius:50% 50% 50% 0.5%/5% 0% 15% 50%;
+    //     overflow: hidden;
+    //     top: 0;
+    //     display: flex;
+    //     position: absolute;
+    //     a {
+    //         background-color: transparent;
+    //         color: #000;
+    //     }
+    // }
 }
 
 .releated {
@@ -431,6 +405,7 @@
         width: 100%;
         height: 100%;
         max-height: 100%;
+
     }
     &__image {
         position: relative;
@@ -451,22 +426,11 @@
             }
         }
     }
-    &__shadow {
-        padding: 0;
-        background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.5));
-        height: 0px;
-        position: absolute;
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        @include effect($height);
-        display: none;
-    }
     &__content {
         position: absolute;
         color: black;
         bottom: 0;
-        padding: 15px 25px;
+        padding: 10px 25px;
         background-color: white;
         // background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7));
         display: inline-flex;
@@ -485,7 +449,6 @@
         } 
     }
     &__title {
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         margin-top: 5px;
         font-weight: 500;
         line-height: calc(100% + 6px);
@@ -500,13 +463,13 @@
             }
         }
         &--longer {
-            font-size: 24px;
+            font-size: 22px;
         }
         &--long {
-            font-size: 27px;
+            font-size: 24px;
         }
         &--normal {
-            font-size: 30px;
+            font-size: 26px;
         }
     }
     &__url {

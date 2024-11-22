@@ -21,12 +21,13 @@ $image__srcset = wp_get_attachment_image_srcset( $image__id, 'full' );
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
     <div class="post__thumbnail thumbnail" style="background:<?php echo $cat_color; ?>">
+    <span class="categories categories--loop"><?php czytajkomiksy_category(); ?></span>
         <a class="thumbnail__link" href="<?php echo get_permalink(); ?>">
             <img class="thumbnail__image" width="640" height="360" src="<?php echo the_post_thumbnail_url('thumbnail'); ?>" alt="<?php the_title(); ?>">
         </a>
     </div>
     <div class="post__content">
-        <span class="categories categories--loop"><?php czytajkomiksy_category(); ?></span>
+       
         <h1 class="post__title">
             <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
         </h1>

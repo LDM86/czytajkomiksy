@@ -1,13 +1,13 @@
 // Center block
 @mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 // Column width with margin
 @mixin column-width($numberColumns: 3) {
-	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+    width: map-get($columns, $numberColumns) - (($columns__margin * ($numberColumns - 1)) / $numberColumns);
 }
 
 /*---- SHADOW ----*/
@@ -16,14 +16,15 @@ $shadow__standard: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
 $shadow__bottom: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
 
 @mixin shadow($shadow__standard) {
-	-webkit-box-shadow: $shadow__standard;
-	-moz-box-shadow: $shadow__standard;
-	box-shadow: $shadow__standard;
+    -webkit-box-shadow: $shadow__standard;
+    -moz-box-shadow: $shadow__standard;
+    box-shadow: $shadow__standard;
 }
 
 /*---- EFFECTS ----*/
 
 $ease: all 0.2s ease-in-out;
+$ease-transform: transform 0.2s ease-in-out;
 $ease-fast: all 0.1s ease-in-out;
 $ease2: all 0.2s cubic-bezier(0.77, 0.2, 0.05, 1);
 $ease3: all 0.5s ease-in-out;
@@ -34,87 +35,80 @@ $menu-after: translateX(-10px);
 $menu-hover: translateX(0);
 
 @mixin effect($ease) {
-	-webkit-transition: $ease;
-	-moz-transition: $ease;
-	-ms-transition: $ease;
-	-o-transition: $ease;
-	transition: $ease;
+    -webkit-transition: $ease;
+    -moz-transition: $ease;
+    -ms-transition: $ease;
+    -o-transition: $ease;
+    transition: $ease;
 }
 
 @mixin transform($transforms) {
-	-webkit-transform: $transforms;
-	-moz-transform: $transforms;
-	-ms-transform: $transforms;
-	transform: $transforms;
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
 }
 
 %menuline {
-	width: 40px;
-	height: 4px;
-	background-color: var(--color-text);
-	margin: 8px 0;
-	@include effect($ease);
+    width: 40px;
+    height: 4px;
+    background-color: var(--color-text);
+    margin: 8px 0;
+    @include effect($ease);
 }
 
 %zero-margin-padding {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 %menu-effect {
-	display: inline-flex;
+    display: inline-flex;
     opacity: 0;
-	@include effect($ease);
-	color: $color__primary;
-	font-weight: 300;
-	font-size: 22px;
-	margin-top: -2px;
+    @include effect($ease);
+    color: $color__primary;
+    font-weight: 300;
+    font-size: 22px;
+    margin-top: -2px;
 }
 
 %hoverline-before {
-	content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  border-radius: 4px;
-  background-color: $color__primary;
-  bottom: 28%;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform .3s ease-in-out;
-	
-}
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: $color__primary;
+    bottom: 28%;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    @include effect($ease-transform);
+    border-radius: 100% 100% 10% 150% / 55% 100% 100% 120%;
 
-%hoverline-after {
-    margin-left: 5px;
-    content: ']';
-	@extend %menu-effect;
-	@include transform($menu-after);
 }
-
 %hoverline-hover {
-	opacity: 1;
-    @include transform($menu-hover);
+	transform-origin: left;
+	transform: scaleX(1);
 }
 
 %hoverline__submenu {
-	content: "";
-	width: 4px;
-	height: 4px;
-	top: 0;
-	left: 0;
-	margin: 0 auto;
-	position: absolute;
-	@include effect($ease);
+    content: "";
+    width: 4px;
+    height: 4px;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    @include effect($ease);
 }
 
 %hoverlineh__submenu {
-	background-color: var(--color-menu-hover);
-	width: 100%;
-	height: 4px;
+    background-color: var(--color-menu-hover);
+    width: 100%;
+    height: 4px;
 }
 
 %button-fix {
-	z-index: 1;
+    z-index: 1;
 }
